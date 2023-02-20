@@ -1,14 +1,5 @@
 console.log("coucou")
 
-/*vidéo banner*/
-const addVideo = document.querySelector(".banner");
-    if addVideoListener('DOMContentLoaded',true){
-
-else
-
-    }
-/*banner.innerHTML = <video auto play muted loop class="banner"><source src="<?php echo get_template_directory_uri() . 'foce-child/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'" type="video/mp4"></video>';
-*/
 /*titres   Ok*/
 document.addEventListener('DOMContentLoaded', (event) => {
  
