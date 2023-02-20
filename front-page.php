@@ -5,7 +5,7 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             <video autoplay muted loop poster="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             <source src="http://localhost/Projet%209/wp-content/uploads/2023/02/video_studio_koukaki.mp4" type="video/mp4">
             </video>

@@ -63,8 +63,45 @@ animation: spin 24s linear infinite;
 .banner img{
 	min-height: 300px;
 	position: absolute;
+	animation: grandtitre 2s,titreprinc 4s 2s ease-in-out infinite;
 }
 
 .banner{
 	background-image: none;
+	animation: banner 2s ;
+	
 }
+
+.banner video{width: 100%;}
+
+@keyframes grandtitre
+{from
+{transform: translateY(40%) ;}
+to 
+{transform: translateY(0%)}
+}
+
+@keyframes banner
+{from
+{transform: translateY(-10%) ;}
+to 
+{transform: translateY(0%)}
+}
+
+@keyframes titreprinc
+{
+	0% {
+        transform: translate(0px, -10px);
+    }
+    25% {
+        transform: translate(-20px, 0px);
+    }
+    50% {
+        transform: translatey(0px, 10px);
+    }
+    75% {
+        transform: translate(20px ,0px);
+    }
+    100% {
+        transform: translate(0px, -10px);
+    }}
