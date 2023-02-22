@@ -26,21 +26,16 @@ animation: spin 24s linear infinite;
 
  /*titres*/
 
-@media (prefers-reduced-motion: no-preference) {
-.toAnim {
-  animation: swipe 2s ;
-	}
-  }
+.reveal
+{opacity: 0;
+transform: translateY(+50px);}
 
- @keyframes swipe{
-	from { 
-		opacity:0;
-		transform: translateY(+50px);}
-	to { 
-		transform: translateY(0px);
-		opacity:1;}
- }
+.reveal-visible
+{opacity: 1;
+transform: translateY(0px);
+transition: 2s;}
 
+/*fade-in*/
  section{
 	animation:fade-in 4s;
  }
@@ -53,39 +48,59 @@ animation: spin 24s linear infinite;
  }
 
  /*nominations*/
+ .nomination
+{
+	display: flex;
+}
+.nomination h2{
+	color: #FFF5E9;
+	font-size: 2.2em;
+	margin: 0;
+	text-align: center;
+	background-image: url("./assets/Rectangle 23.png");
+	background-size: contain;	
+	padding: 2em 4.4em;
+	}
+
+.h2nom{width: 60%;}
+
  .nominations
- {background-image: url("./assets/section_finale.png");
+ {background-image: url("./assets/nominations.png");
 	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 300px;}
+	min-height: 300px;
+	width: 30%;
+	margin-top: 4em;
+	}
 
 /*video*/
 .banner img{
 	min-height: 300px;
 	position: absolute;
+	z-index: 10;
 	animation: grandtitre 2s,titreprinc 4s 2s ease-in-out infinite;
+	width: auto;
 }
 
 .banner{
 	background-image: none;
 	animation: banner 2s ;
-	
 }
 
-.banner video{width: 100%;}
+.banner video{width: 100%;
+}
 
 @keyframes grandtitre
 {from
 {transform: translateY(40%) ;}
 to 
-{transform: translateY(0%)}
+{transform: translateY(0%);}
 }
 
 @keyframes banner
 {from
 {transform: translateY(-10%) ;}
 to 
-{transform: translateY(0%)}
+{transform: translateY(0%);}
 }
 
 @keyframes titreprinc
@@ -105,3 +120,30 @@ to
     100% {
         transform: translate(0px, -10px);
     }}
+/*problème de dacalage sur la fleur d histoire */
+
+.story h2::before {
+
+	left: -5.5em!important;}
+
+
+	.story h2::after {
+	left: -4.9em ;}
+
+	/*parallax sur la video*/
+#parallax{
+	position: relative;
+}
+
+	/*caroussel*/
+	.essai
+	{display: flex;
+   flex-direction: row;
+   width: 100%;}
+   
+   
+   .essai img {
+	   height: none; 
+	   max-width: none; 
+   }
+
