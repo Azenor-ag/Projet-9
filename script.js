@@ -49,3 +49,4 @@ const cloudIntersect = function (entries, observer) {
 const cloudObserver = new IntersectionObserver(cloudIntersect, options);
 document.querySelectorAll('.clouds').forEach(function (r)
 {cloudObserver.observe (r)});
+

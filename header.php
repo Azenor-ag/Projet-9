@@ -16,9 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.3/swiper-bundle.css" >
 
 	<?php wp_head(); ?>
 </head>
@@ -30,18 +29,24 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
             <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
                 <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
             </ul>
-
+            <div class="burger">
+                <ul>
+                <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                    <li class="here"><a href="#story">Histoire</a></li>
+                    <li class="cat"><a href="#characters">Personnages</a></li>
+                    <li class="cat2"><a href="#story">Histoire</a></li>
+                    <li><a href="#studio">Studio Koukaki</a></li>
+                    <p>Studio Koukaki</p>
+                </ul>
+                
+            </div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

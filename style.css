@@ -11,7 +11,7 @@
 
 /*fleurs qui tournent*/
 
-.site-footer::after,.site-footer ul::after,.site-footer::before,.story h2::after,.story__article::after,#studio h2::before,#studio h2::after{
+.site-footer::after,.cat2::before,.site-footer ul::after,.here::after,.here::before,.site-footer::before,.burger ul::after,.story h2::after,.story__article::after,.burger ul::before,#studio h2::before,#studio h2::after{
 animation: spin 24s linear infinite;
 }
 
@@ -86,7 +86,7 @@ transition: 2s;}
 }
 
 section
-{background-color: #FFF5E9;}*/
+{background-color: #FFF5E9;}
 
 #studio {
 	position: relative;
@@ -152,9 +152,7 @@ left: -5.5em!important;}
 .story h2::after {
 left: -4.9em ;}
 
-/*parallax sur la video*/
-
-	/*caroussel*/
+/*caroussel*/
 .swiper {
   width: 100%;
 }
@@ -212,3 +210,108 @@ left: -4.9em ;}
 	to 
 	{transform: translateX(-300px);}
 	}
+
+/*menu toggle*/
+.menu-toggle {
+	display: block;
+	width: 35px;
+	height: 49px;
+	background-color: black;
+	margin: 6px 0;
+	position: absolute;
+	top: 20%;
+	right: 15%;
+} 
+
+.burger{
+	width: 100%;
+	height: 100%;
+	background-color: #FFF5E9;
+	position: fixed;
+}
+
+.burger ul{
+display: block;
+text-align: center;
+}
+
+.burger li{
+	font-size: 40px;
+	margin-top: 2%;
+}
+
+.burger img{
+	width: 12%;
+	margin-top: 2%;
+}
+.burger p{
+	position: absolute;
+left: 47%;
+top: 80%;
+}
+
+/*fleurs burger*/
+.burger ul::before{
+	content: url("./assets/Sunflower.png");
+	position: absolute;
+	right: 15%;
+	bottom: 34.8em;
+}
+
+.burger ul::after{
+	content: url("./assets/orchid.png");
+	position: absolute;
+	right: 92%;
+	bottom: 36.8em;
+}
+
+.here::before{
+	content: url("./assets/flower.png");
+	position: absolute;
+	right: 80%;
+	bottom: -5.2em;
+}
+
+.here::after{
+	content: url("./assets/random_flower.png");
+	position: absolute;
+	right: -5%;
+	bottom: -4.7em;
+}
+
+.cat2::before{
+	content: url("./assets/hibiscus_footer.png");
+	position: absolute;
+	right: -18%;
+	bottom: -16em;	
+}
+
+/*tetes de chats flottantes*/
+
+.cat::before{
+	content: url("./assets/cat2.png");
+	position: absolute;
+	right: 69%;
+	bottom: -1.2em;
+	animation: titreprinc 4s infinite;
+}
+
+.cat::after{
+	content: url("./assets/cat1.png");
+	position: absolute;
+	right: 86%;
+	bottom: -7.6em;
+	animation: titreprinc 4s infinite;
+}
+
+.cat2::after{
+	content: url("./assets/cat3.png");
+	position: absolute;
+	right: 14%;
+	bottom: -1.6em;
+	animation: titreprinc 4s infinite;
+}
+
+.burger a:hover {
+	color: rgb(114, 108, 58);
+  }
