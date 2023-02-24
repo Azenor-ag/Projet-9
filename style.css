@@ -49,8 +49,8 @@ transition: 2s;}
 
  /*nominations*/
  .nomination
-{
-	display: flex;
+{display: flex;
+	position: relative;
 }
 .nomination h2{
 	color: #FFF5E9;
@@ -65,11 +65,10 @@ transition: 2s;}
 .h2nom{width: 60%;}
 
  .nominations
- {background-image: url("./assets/nominations.png");
-	background-repeat: no-repeat;
-	min-height: 300px;
+ {min-height: 300px;
 	width: 30%;
 	margin-top: 4em;
+	z-index: 1;
 	}
 
 /*video*/
@@ -86,7 +85,31 @@ transition: 2s;}
 	animation: banner 2s ;
 }
 
-.banner video{width: 100%;
+section
+{background-color: #FFF5E9;}*/
+
+#studio {
+	position: relative;
+	margin-top: 0em;}
+
+.banner video{
+	max-width: 100%;
+	max-height: 100%;
+	position: fixed;
+	margin-top:-15em ;
+}
+.site-footer ul::after{
+	z-index: 0;
+}
+footer li{
+	z-index:2
+}
+footer{
+	background-color: #FFF5E9;
+}
+
+#studio{
+	margin-top:0%;
 }
 
 @keyframes grandtitre
@@ -120,30 +143,72 @@ to
     100% {
         transform: translate(0px, -10px);
     }}
-/*problème de dacalage sur la fleur d histoire */
+/*problème de décalage sur la fleur d histoire */
 
 .story h2::before {
+left: -5.5em!important;}
 
-	left: -5.5em!important;}
+
+.story h2::after {
+left: -4.9em ;}
+
+/*parallax sur la video*/
+
+	/*caroussel*/
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 500px;
+  height: 500px;
+}
 
 
-	.story h2::after {
-	left: -4.9em ;}
+.main-character{
+	position: relative;
+	width: 100%;
 
-	/*parallax sur la video*/
-#parallax{
+}
+
+/*nuages*/
+.story #place {
+	display: flex;
+	background-image: url("./assets/Studio_Koukaki-image_place.png");
+	width: 100%;
+	min-height: 699px;
+	background-size: cover;
 	position: relative;
 }
 
-	/*caroussel*/
-	.essai
-	{display: flex;
-   flex-direction: row;
-   width: 100%;}
-   
-   
-   .essai img {
-	   height: none; 
-	   max-width: none; 
-   }
+.big_cloud{
+	position: absolute;
+	right: 15%;
+	top: 6em;
+	filter: blur(15px);
+}
 
+.little_cloud{
+	position: absolute;
+	right: 36%;
+	top:19em;
+	filter: blur(15px);
+}
+
+.translatecloud
+{animation:cloud 3s ease-in-out;}
+
+@keyframes cloud
+{from
+	{transform: translateX(0px) ;}
+	to 
+	{transform: translateX(-300px);}
+	}

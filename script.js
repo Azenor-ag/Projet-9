@@ -1,4 +1,4 @@
-console.log("coucou")
+console.log("coucou");
 
 /*titres Ok*/
 const ratio = 0.5
@@ -17,15 +17,35 @@ const handleIntersect = function (entries, observer) {
 }
 const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('.reveal').forEach(function (r)
-{observer.observe (r)})
+{observer.observe (r)});
 
-/* parallax*/
+/*carrousel*/
 
-/*
-function parallax(){
-const video = document.getElementById('.parallax');
-video.style.top = -(window.pageYOffset / 4)+ "px";
+ let swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    initialSlide: 1,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+  });
+
+/*nuages*/
+
+const cloudIntersect = function (entries, observer) {
+    entries.forEach(function (entry){
+        if (entry.intersectionRatio > ratio)
+        {
+    entry.target.classList.add('translatecloud')
+    observer.unobserve(entry.target)}
+})
 }
-
-window.addEventListener("scroll", parallax , false );
-*/
+const cloudObserver = new IntersectionObserver(cloudIntersect, options);
+document.querySelectorAll('.clouds').forEach(function (r)
+{cloudObserver.observe (r)});
