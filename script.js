@@ -50,3 +50,39 @@ const cloudObserver = new IntersectionObserver(cloudIntersect, options);
 document.querySelectorAll('.clouds').forEach(function (r)
 {cloudObserver.observe (r)});
 
+/*menu toggle*/
+let sidenav = document.getElementById("mySidenav");
+let openBtn = document.querySelector(".openBtn");
+let closeBtn = document.querySelector(".closeBtn");
+let  chgt = document.getElementById('chgt');
+let open = false;/*menu fermé au début*/
+
+  chgt.onclick = openCloseNav;
+ 
+function openCloseNav(){
+if (open){
+  sidenav.classList.remove("active");
+  chgt.classList.add("openBtn");
+  chgt.classList.remove("closeBtn");
+  open = false;
+}
+else{
+  sidenav.classList.add("active");
+  chgt.classList.remove("openBtn");
+  chgt.classList.add("closeBtn");
+  open = true;
+}
+}
+
+let move = document.querySelectorAll(".move");
+move.forEach(function(element) {
+  element.addEventListener('click', closeNav);
+});
+
+function closeNav(){
+  sidenav.classList.remove("active");
+  chgt.classList.add("openBtn");
+  chgt.classList.remove("closeBtn");
+  open = false;
+  console.log("hey")
+}

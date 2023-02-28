@@ -28,25 +28,23 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="true">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-            </ul>
-            <div class="burger">
-                <ul>
-                <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-                    <li class="here"><a href="#story">Histoire</a></li>
-                    <li class="cat"><a href="#characters">Personnages</a></li>
-                    <li class="cat2"><a href="#story">Histoire</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
-                    <p>Studio Koukaki</p>
-                </ul>
-                
-            </div>
-		</nav><!-- #site-navigation -->
+		<div  class="main-navigation">
+               <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+</div>
+<div id="mySidenav" class="sidenav burger">
+  <img  src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+  <nav id="site-navigation">
+        <ul>
+            <li class="here"><a class="move" href="#story">Histoire</a></li>
+            <li class="cat"><a class="move" href="#characters">Personnages</a></li>
+            <li class="cat2"><a class="move" href="#place">Lieu</a></li>
+            <li ><a class="move" href="#studio">Studio Koukaki</a></li>
+            <p>Studio Koukaki</p>
+        </ul>
+  </nav>
+</div>
+
+<a href="#" id="chgt" class="openBtn"></a>
+
 	</header><!-- #masthead -->
+

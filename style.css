@@ -33,7 +33,7 @@ transform: translateY(+50px);}
 .reveal-visible
 {opacity: 1;
 transform: translateY(0px);
-transition: 2s;}
+transition: 3s;}
 
 /*fade-in*/
  section{
@@ -72,6 +72,7 @@ transition: 2s;}
 	}
 
 /*video*/
+	
 .banner img{
 	min-height: 300px;
 	position: absolute;
@@ -81,9 +82,13 @@ transition: 2s;}
 }
 
 .banner{
-	background-image: none;
 	animation: banner 2s ;
 }
+
+@media screen and (max-width: 700px){
+	.banner video{
+		display: none;}
+	}
 
 section
 {background-color: #FFF5E9;}
@@ -94,7 +99,6 @@ section
 
 .banner video{
 	max-width: 100%;
-	max-height: 100%;
 	position: fixed;
 	margin-top:-15em ;
 }
@@ -240,14 +244,10 @@ text-align: center;
 	margin-top: 2%;
 }
 
-.burger img{
-	width: 12%;
-	margin-top: 2%;
-}
 .burger p{
 	position: absolute;
 left: 47%;
-top: 80%;
+top: 90%;
 }
 
 /*fleurs burger*/
@@ -255,35 +255,35 @@ top: 80%;
 	content: url("./assets/Sunflower.png");
 	position: absolute;
 	right: 15%;
-	bottom: 34.8em;
+	bottom: 30.8em;
 }
 
 .burger ul::after{
 	content: url("./assets/orchid.png");
 	position: absolute;
 	right: 92%;
-	bottom: 36.8em;
+	bottom: 32.8em;
 }
 
 .here::before{
 	content: url("./assets/flower.png");
 	position: absolute;
 	right: 80%;
-	bottom: -5.2em;
+	bottom: 5.2em;
 }
 
 .here::after{
 	content: url("./assets/random_flower.png");
 	position: absolute;
 	right: -5%;
-	bottom: -4.7em;
+	bottom: 5.7em;
 }
 
 .cat2::before{
 	content: url("./assets/hibiscus_footer.png");
 	position: absolute;
-	right: -18%;
-	bottom: -16em;	
+	right: -20%;
+	bottom: -10em;	
 }
 
 /*tetes de chats flottantes*/
@@ -292,7 +292,7 @@ top: 80%;
 	content: url("./assets/cat2.png");
 	position: absolute;
 	right: 69%;
-	bottom: -1.2em;
+	bottom: 7.8em;
 	animation: titreprinc 4s infinite;
 }
 
@@ -300,7 +300,7 @@ top: 80%;
 	content: url("./assets/cat1.png");
 	position: absolute;
 	right: 86%;
-	bottom: -7.6em;
+	bottom: 0.4em;
 	animation: titreprinc 4s infinite;
 }
 
@@ -308,10 +308,99 @@ top: 80%;
 	content: url("./assets/cat3.png");
 	position: absolute;
 	right: 14%;
-	bottom: -1.6em;
+	bottom: 3.8em;
 	animation: titreprinc 4s infinite;
 }
 
 .burger a:hover {
-	color: rgb(114, 108, 58);
+	text-shadow: 0px 0px 14px #FF5C00;;
   }
+
+/* Sidenav menu */
+.sidenav {
+    height: 90%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -200%;
+    left: 0%;
+    background-color: #FFF5E9;
+    padding-top: 0px;
+    transition: left 0.5s ease;
+	margin-top: 5%;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+	display: block;
+	text-align: center;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    text-decoration: none;
+    font-size: 32px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+	justify-content: center;
+  }
+  
+  
+  /* Active class */
+  .sidenav.active {
+    top: 0;
+	animation:fade-in 2s;
+  }
+  
+  /* Close btn */
+  .closeBtn {
+	width: 35px;
+    height: 23px;
+   	position: absolute;
+	top:34%;
+	right: 12%;
+	content: url("./assets/Burger croix.png");
+  }
+  
+  .openBtn {
+    width: 35px;
+    height: 23px;
+   	position: absolute;
+	top:34%;
+	right: 12%;
+	content: url("./assets/Burger.png");
+  }
+.burger-icon{
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+header img{
+	width: 20%;
+	margin-top: 2%;
+	margin-left: 40%;
+}
+
+.main-navigation .site-title{
+	text-align: center;
+	padding-top: 22px;
+}
+
+#site-navigation{
+animation: titremenu 5s;
+}
+
+@keyframes titremenu {
+	
+	from{opacity: 0;
+		transform: translateY(+80px);}
+
+	to{opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
